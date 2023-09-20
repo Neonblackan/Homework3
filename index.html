@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблицы</title>
+    <style>
+        .background {
+            background-color: antiquewhite;
+        }
+
+        .text {
+            text-transform: uppercase;
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form align="center" action="post">
+        Введите ФИО:
+        <br><input type="text" name="username">
+        <p>
+            Введите пароль:
+            <br><input type="password" name="password">
+        </p>
+        Какой диск вы хотите получить?
+        <p>
+            <input type="radio" name="disk"> <Label>CD</Label><br>
+            <input type="radio" name="disk"> <Label>DVD</Label><br>
+        </p>
+
+        <p>Какие обучающие курсы вы хотите видеть на диске?</p>
+        <input type="checkbox" name="fotoshop" id=""> Курсы по фотошопу <br>
+        <input type="checkbox" name="Adobe Dream weawer" id=""> Курсы Adobe Dream weawer <br>
+        <input type="checkbox" name="PHP" id=""> Курсы по PHP <br>
+        <p>Выберите способ доставки</p>
+        <select name="delivery" id="">
+            <option selected disabled value="  ">Выберите способ доставки</option>
+            <option value="Курьерская"> Курьерская</option>
+            <option value="Курьерская"> Почта</option>
+            <option value="Курьерская"> Самовывоз</option>
+            <option value="Курьерская"> Пункт выдачи</option>
+        </select>
+        <p>Введите адрес доставки</p>
+        <textarea name="addres" id="" cols="30" rows="10" placeholder="Введите адрес"></textarea>
+        <table align="center">
+            <tr>
+                <td><input type="submit" value="Сделать заказ"></td>
+                <td> <input type="reset" value="Стереть"></td>
+            </tr>
+        </table>
+    </form>
+
+    <form action="post">
+        <h2><i>Пожалуйста, заполните форму. Обязательные поля помечены *</i></h2>
+        <fieldset>
+            <legend>Контактная информация</legend>
+            <label>Имя *</label>
+            <input type="text" name="username" required>
+            <p><label>Телефон</label>
+                <input type="text" name="phone number">
+            </p>
+            <P><label>Email *</label>
+                <input type="email" name="email" required>
+            </P>
+        </fieldset>
+        <fieldset>
+            <legend>Персональная информация</legend>
+            <label>Возраст *</label>
+            <input type="number" min="1" max="100" step="1" name="age">
+            <p>
+                <label> Пол</label>
+                <select name="gender" id="">
+                    <option value="gender"> Выберите пол</option select disabled>
+                    <option value="men">Мужской </option>
+                    <option value="women">Женский</option>
+                </select>
+            </p>
+            <p><label>Перечислите личные качества</label>
+                <textarea name="qualities" id="" cols="30" rows="10"></textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Выберите ваших любимых животных</legend>
+
+            <input type="checkbox" name="zebra" id=""> <label>Зебра</label>
+            <input type="checkbox" name="cat" id=""> <label>Кошка</label>
+            <input type="checkbox" name="anaconda" id=""> <label>Анаконда</label>
+            <br>
+            <input type="checkbox" name="elephant" id=""> <label>Слон</label>
+            <input type="checkbox" name="antelope" id=""> <label>Антилопа</label>
+            <input type="checkbox" name="pigeon" id=""> <label>Голубь</label>
+            <input type="checkbox" name="crab" id=""> <label>Краб</label>
+            </br>
+        </fieldset>
+        <table>
+            <tr>
+                <td><input type="submit" value="Отправить информацию"> </td>
+                <td><input type="reset" value="Стереть данные"></td>
+            </tr>
+        </table>
+    </form>
+
+    <h2>Анкета посетителя ресторана</h2>
+    <form action="post">
+        <fieldset class="background" class="border">
+            <legend class="text">Контактная информация</legend>
+            <p><label>Имя</label> <input type="text" name="username"></p>
+            <p><label>Телефон</label> <input type="text" name="phone number"></p>
+            <p><label>Email</label> <input type="email" name="email"></p>
+            <p><label>Дата посещения</label> <input type="date" name="date"></p>
+        </fieldset>
+        <fieldset class="background">
+            <legend class="text">Персональная информация</legend>
+            <p><label>Возраст</label> <input type="number" min="1" max="100" step="1" name="age"></p>
+            <p><label>Любимая кухня</label> <select name="gender" id="">
+                    <option selected disabled value="Выберите кухню">Выберите кухню</option>
+                    <option value="Russian">Русская</option>
+                    <option value="Georgian">Грузинская</option>
+                    <option value="Japanese">Японская</option>
+                    <option value="European">Европейская</option>
+                </select>
+            </p>
+            <table>
+                <tr>
+                    <td><label>Какие блюда Вы хотели бы <br>увидеть в меню</br></label></td>
+                    <td><textarea placeholder="введите название блюда" name="choice" id="" cols="30"
+                            rows="10"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset class="background">
+            <legend class="text">Оценка нашего заведения</legend>
+            <h3>Почему вы выбрали наше заведение?</h3>
+            <p><input type="radio" name="name" value="home"> <label>Недалеко от дома/работы</label> </p>
+            <p><input type="radio" name="name" value="advertising"> <label>Увидел рекламу</label></p>
+            <p><input type="radio" name="name" value="advised"> <label>Посоветовали</label></p>
+            <p><input type="radio" name="name" value="price"> <label>Оптимальное соотношение цены и качества</label></p>
+            <h3>Вы будете рекомендовать наше заведение своим знакомым?</h3>
+            <p><input type="radio" name="name" value="Yes"> <label>Да</label> </p>
+            <p><input type="radio" name="name" value="No"> <label>Нет</label> </p>
+        </fieldset>
+        <table>
+            <tr>
+                <td> <input type="submit" value="Отправить"></td>
+                <td> <input type="reset" value="Очистить данные" ></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
